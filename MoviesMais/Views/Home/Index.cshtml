@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<img src="../../Content/imagens/banner3.png" />
+
+<div class="corpo">
+    <div class="filmesFavoritos">
+        <h1>
+            Assista seus filmes favoritos
+        </h1>
+        <h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at porttitor enim. Donec imperdiet erat turpis. Sed at posuere nisl. 
+            Aenean porta, nunc id fringilla interdum, ante mauris dapibus lectus, et pulvinar eros urna sed tellus. Nam tincidunt venenatis elementum. 
+            Vestibulum dapibus nibh sit amet sapien interdum viverra. Etiam iaculis magna id sem dignissim, et convallis velit venenatis.
+        </h4>
+        
+        <ul>
+        @foreach (var categoria in ViewBag.Categorias)
+        {
+            <li>
+                <div class="itemCategoria">@categoria.Nome</div>
+            </li>
+        }
+        </ul>
+    </div>
+    <div class="botaoVerTodos">
+        VER TODOS
+    </div>
+    <div class="tituloMaisFilmes">
+        Mais filmes
+    </div>
+    <div class="maisFilmes">
+        <div class="cartaz">
+            <img src="../../Content/imagensFilmes/hulk.jpg" />
+            <div class="visualizacoesCartaz">10</div>
+            <div class="tempoCartaz">90 min</div>
+            <div class="likesCartaz">20</div>
+            <div class="nomeFilmeCartaz">Filme 1</div>
+            <div class="anoCartaz">2015</div>
+        </div>
+    </div>
+</div>

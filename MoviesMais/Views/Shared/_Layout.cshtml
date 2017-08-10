@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="corpo">
+            <div class="cabecalhoEsquerdo">
+                <img src="../../Content/imagens/logo.png" />
+            </div>
+            <div class="cabecalhoDireito">
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">SOBRE</a></li>
+                        <li><a href="#">MAIS POPULARES</a></li>
+                        <li><a href="#">NOVIDADES</a></li>
+                        <li>@Html.ActionLink("CONTATO", "Index", "Contato")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuCategoria">
+        <nav id="menu2">
+            <ul>
+            @foreach (var categoria in ViewBag.CategoriasMenu)
+            {
+                <li><a href="#">@categoria.Nome</a></li>
+            }
+            </ul>
+        </nav>
+    </div>
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
