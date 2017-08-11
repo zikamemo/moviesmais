@@ -54,8 +54,8 @@ Insert into Categoria (Nome, FaixaEtaria, ApareceNoMenu, Descricao) values ('TES
 Insert into Filme(Nome, AnoLancamento, Imagem, Visualizacoes, Likes, TempoDuracao, CodigoCategoria)
 values('Se meu fusca falasse', 1968, '', 0, 0, 108, 7);
 
-Insert into Filme(Codigo, Nome, AnoLancamento, Imagem, Visualizacoes, Likes, TempoDuracao, CodigoCategoria)
+Insert into Filme(Nome, AnoLancamento, Imagem, Visualizacoes, Likes, TempoDuracao, CodigoCategoria)
 values ('O poderoso chefão', 1972, '', 0, 0, 175, 8);
 
-Insert into Filme(Codigo, Nome, AnoLancamento, Imagem, Visualizacoes, Likes, TempoDuracao, CodigoCategoria)
+Insert into Filme(Nome, AnoLancamento, Imagem, Visualizacoes, Likes, TempoDuracao, CodigoCategoria)
 values ('Frozen - Uma aventura congelante', 2013, '', 0, 0, 102, 4);
