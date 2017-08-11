@@ -65,5 +65,11 @@ namespace MoviesMais.Models
 
             return retornoConsulta;
         }
+        public int InserirCategoria(Categoria categoria)
+            string comando = "Insert into Categoria(Nome, faixaEtaria, ApareceNoMenu, Descricao) values(@Nome,@faixaEtaria, @ApareceNoMenu, @Descricao,);";
+
+        MySqlConnection conexao = new MySqlConnection("Server=localhost;Database=MoviesMais;Uid=root;Pwd=;"); //Ponte
+        MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
     }
 }
